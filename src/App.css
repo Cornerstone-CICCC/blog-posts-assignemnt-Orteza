@@ -1,60 +1,42 @@
-.app {
-  max-width: 800px;
+#root {
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 20px;
-}
-
-header {
+  padding: 2rem;
   text-align: center;
-  margin-bottom: 40px;
 }
 
-header h1 {
-  color: #334;
-  font-size: 2.5rem;
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
-.blog-post-list {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-
-.blog-post {
-  background: #fff;
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.blog-post h2 {
-  color: #2c3e50;
-  margin-bottom: 10px;
-  font-size: 1.5rem;
-}
-
-.blog-post .author {
-  color: #666;
-  font-style: italic;
-  margin-bottom: 15px;
-}
-
-.blog-post p {
-  color: #444;
-  line-height: 1.6;
-}
-
-/* Add some basic responsive design */
-@media (max-width: 600px) {
-  .app {
-    padding: 10px;
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
   }
-
-  .blog-post {
-    padding: 15px;
+  to {
+    transform: rotate(360deg);
   }
+}
 
-  header h1 {
-    font-size: 2rem;
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
   }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
 }

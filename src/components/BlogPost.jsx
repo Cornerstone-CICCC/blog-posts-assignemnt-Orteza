@@ -1,9 +1,9 @@
-const BlogPost = ({ post, author }) => {
+const BlogPost = ({ id, title, body, author, onPostClick }) => {
   return (
     <article className="blog-post">
-      <h2>{post.title}</h2>
-      {author && <p className="author">By: {author.name}</p>}
-      <p>{post.body}</p>
+      <h2 onClick={() => onPostClick(id)} style={{ cursor: 'pointer' }}>{title}</h2>
+      <p className="author">By: {author}</p>
+      <p className="body">{body}</p>
     </article>
   );
 };
